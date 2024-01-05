@@ -9,9 +9,9 @@
     <%= post.desc %>
   </p>
   <p>
-    <%# if post.image? %>
-    <%#= image_tag(post.image, style:"height:100px; width:100px;") %>
-    <%# end %>
+    <%= post.video %>
+    <%= post.image %>
+    <%=post.image.present? ? image_tag(post.image) : post.image %>
   </p>
   <p>
     <strong>Description:</strong>
